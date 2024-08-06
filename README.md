@@ -13,7 +13,7 @@ A barebones Node.js app using [Express 4](http://expressjs.com/).
 Make sure you have [Node.js](http://nodejs.org/)installed.
 
 ```sh
-git clone  # or clone your own fork
+git clone https://github.com/ramyerubandi1/sample-node.git # or clone your own fork
 cd node-js-sample
 npm install
 npm start
