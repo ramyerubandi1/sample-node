@@ -3,7 +3,8 @@ FROM node:18
 
 WORKDIR /usr/src/app
 
-COPY sample-node
+COPY package*.json ./
+
 
 RUN apt-get update 
 
