@@ -1,18 +1,13 @@
+FROM openjdk:17-jdk-slim
 
-FROM node:18
+WORKDIR /app
 
-WORKDIR /usr/src/app
+COPY HelloDocker.java .
 
-COPY package*.json ./
+RUN apt-get update
 
+RUN openjdk:17-jdk-slim install
 
-RUN apt-get update 
+RUN javac HelloDocker.java
 
-RUN apt-get install -y git
-
-RUN npm install
-COPY . .
-
-EXPOSE 8080
-
-CMD [ "npm", "start" ]
+CMD ["java", "HelloDocker"]
